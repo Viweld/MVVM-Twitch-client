@@ -10,6 +10,4 @@ import retrofit2.http.*
 interface RetrofitTwichServices {
     @GET("top")
     fun getGame(): Call<Game>
-
-
 }
