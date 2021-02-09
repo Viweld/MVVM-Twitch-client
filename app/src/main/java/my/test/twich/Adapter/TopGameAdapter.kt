@@ -7,27 +7,30 @@ import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.recyclerview_item.view.*
-import my.test.twich.Model.Movie
+import my.test.twich.Model.Game
+import my.test.twich.Model.GameX
+import my.test.twich.Model.Top
 
 import my.test.twich.R
 
 class TopGameAdapter(
     private val context: Context,
-    private val gameList: MutableList<Movie>
+    private val gameList: Game
 ) : RecyclerView.Adapter<TopGameAdapter.MyViewHolder>() {
 
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        //val image: ImageView = itemView.image_game
+        val image = itemView.image_game
         val txt_name: TextView = itemView.txt_name
-        //val txt_channals: TextView = itemView.txt_channals
-        //val txt_viewers: TextView = itemView.txt_viewers
+        val txt_channels: TextView = itemView.txt_channels
+        val txt_viewers: TextView = itemView.txt_viewers
 
-        fun bind(listItem: Movie) {
-            /*image.setOnClickListener {
+        fun bind(listItem: GameX) {
+            image.setOnClickListener {
                 Toast.makeText(it.context, "нажал на ${itemView.image_game}", Toast.LENGTH_SHORT)
                     .show()
-            }*/
+            }
             itemView.setOnClickListener {
                 Toast.makeText(it.context, "нажал на ${itemView.txt_name.text}", Toast.LENGTH_SHORT)
                     .show()
@@ -42,16 +45,16 @@ class TopGameAdapter(
         return MyViewHolder(itemView)
     }
 
-    override fun getItemCount() = gameList.size
+    override fun getItemCount() = gameList.top.size
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        val listItem = gameList[position]
+        val listItem = gameList.top[position].game
         holder.bind(listItem)
 
-        //Picasso.get().load(gameList[position].cover).into(holder.image)
-        //holder.txt_name.text = gameList[position].name
-        //holder.txt_channals.text = gameList[position].
-        holder.txt_name.text = gameList[position].name
+        Picasso.get().load(gameList.top[position].game.box.medium).into(holder.image)
+        holder.txt_viewers.text = gameList.top[position].viewers.toString()
+        holder.txt_channels.text = gameList.top[position].channels.toString()
+        holder.txt_name.text = gameList.top[position].game.name
 
 
     }

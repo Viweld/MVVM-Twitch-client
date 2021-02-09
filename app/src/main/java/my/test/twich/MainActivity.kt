@@ -8,7 +8,8 @@ import dmax.dialog.SpotsDialog
 import kotlinx.android.synthetic.main.activity_main.*
 import my.test.twich.Adapter.TopGameAdapter
 import my.test.twich.Interface.RetrofitTwichServices
-import my.test.twich.Model.Movie
+import my.test.twich.Model.Game
+import my.test.twich.Model.Top
 import my.test.twich.Retrofit.Apifactory
 import retrofit2.Call
 import retrofit2.Callback
@@ -35,18 +36,17 @@ class MainActivity : AppCompatActivity() {
 
     fun getAllTopGamesList() {
         alert.show()
-        mService.getGame().enqueue(object : Callback<MutableList<Movie>> {
-            override fun onFailure(call: Call<MutableList<Movie>>, t: Throwable) {
+        mService.getGame().enqueue(object : Callback<Game> {
+            override fun onFailure(call: Call<Game>, t: Throwable) {
 
             }
             override fun onResponse(
-                call: Call<MutableList<Movie>>,
-                response: Response<MutableList<Movie>>
+                call: Call<Game>,
+                response: Response<Game>
             ) {
-                tgAdapter = TopGameAdapter(baseContext, response.body() as MutableList<Movie>)
+                tgAdapter = TopGameAdapter(baseContext, response.body() as Game)
                 tgAdapter.notifyDataSetChanged()
                 recyclerTopGame.adapter = tgAdapter
-
                 alert.dismiss()
             }
         })
