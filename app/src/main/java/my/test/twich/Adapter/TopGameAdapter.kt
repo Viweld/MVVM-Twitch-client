@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.recyclerview_item.view.*
 import my.test.twich.Model.Game
@@ -51,7 +52,8 @@ class TopGameAdapter(
         val listItem = gameList.top[position].game
         holder.bind(listItem)
 
-        Picasso.get().load(gameList.top[position].game.box.medium).into(holder.image)
+        //Picasso.get().load(gameList.top[position].game.box.medium).into(holder.image)
+        Glide.with(context).load(gameList.top[position].game.box.medium).into(holder.image)
         holder.txt_viewers.text = gameList.top[position].viewers.toString()
         holder.txt_channels.text = gameList.top[position].channels.toString()
         holder.txt_name.text = gameList.top[position].game.name
