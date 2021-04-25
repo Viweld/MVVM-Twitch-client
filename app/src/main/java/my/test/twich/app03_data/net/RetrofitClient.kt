@@ -1,7 +1,6 @@
-package my.test.twich.Retrofit
+package my.test.twich.app03_data.net
 
 
-import my.test.twich.Interface.RetrofitTwichServices
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
@@ -14,7 +13,7 @@ const val BASE_URL="https://api.twitch.tv/kraken/games/"
 
 
 //ApiFactory to create Twich Api
-object Apifactory{
+object RetrofitClient {
     //Creating Auth Interceptor to add Client-ID in front of all the requests.
     private val authInterceptor = Interceptor {chain->
         val newRequest = chain.request()
@@ -37,5 +36,6 @@ object Apifactory{
         .addConverterFactory(GsonConverterFactory.create())
         .build()
 
-    val retrofitTwichServices : RetrofitTwichServices = retrofit().create(RetrofitTwichServices::class.java)
+    val GAME_API : GameAPI = retrofit().create(GameAPI::class.java)
+
 }

@@ -1,7 +1,5 @@
-package my.test.twich.Model
+package my.test.twich.app03_data.model
 
-
-import com.google.gson.annotations.SerializedName
 
 data class Box(
     val large: String?,
