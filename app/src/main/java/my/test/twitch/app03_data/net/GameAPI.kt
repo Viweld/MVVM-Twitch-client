@@ -1,6 +1,6 @@
-package my.test.twich.app03_data.net
+package my.test.twitch.app03_data.net
 
-import my.test.twich.app03_data.model.Game
+import my.test.twitch.app03_data.model.Game
 import retrofit2.Call
 import retrofit2.http.*
 

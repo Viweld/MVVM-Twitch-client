@@ -1,4 +1,4 @@
-package my.test.twich.app03_data.model
+package my.test.twitch.app03_data.model
 
 
 import androidx.room.Embedded

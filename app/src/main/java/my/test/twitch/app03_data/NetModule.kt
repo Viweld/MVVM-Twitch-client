@@ -1,11 +1,11 @@
-package my.test.twich.app03_data
+package my.test.twitch.app03_data
 import android.util.Log
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
-import my.test.twich.app03_data.model.Game
-import my.test.twich.app03_data.net.GameAPI
+import my.test.twitch.app03_data.model.Game
+import my.test.twitch.app03_data.net.GameAPI
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import retrofit2.Call

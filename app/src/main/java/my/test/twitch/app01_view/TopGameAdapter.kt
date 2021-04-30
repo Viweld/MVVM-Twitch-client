@@ -1,7 +1,6 @@
-package my.test.twich.app01_view
+package my.test.twitch.app01_view
 
 import android.content.Context
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,11 +9,10 @@ import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.recyclerview_item.view.*
-import my.test.twich.app03_data.model.Game
-import my.test.twich.app03_data.model.GameX
+import my.test.twitch.app03_data.model.GameX
 
-import my.test.twich.R
-import my.test.twich.app03_data.model.Top
+import my.test.twitch.R
+import my.test.twitch.app03_data.model.Top
 
 class TopGameAdapter(
     private val context: Context,

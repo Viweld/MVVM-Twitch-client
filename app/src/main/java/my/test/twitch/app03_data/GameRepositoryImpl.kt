@@ -1,12 +1,12 @@
-package my.test.twich.app03_data
+package my.test.twitch.app03_data
 
 import android.util.Log
 import androidx.lifecycle.LiveData
 import kotlinx.coroutines.flow.Flow
-import my.test.twich.app03_data.db.GameDao
-import my.test.twich.app03_data.model.Game
-import my.test.twich.app03_data.model.Top
-import my.test.twich.app03_data.net.GameAPI
+import my.test.twitch.app03_data.db.GameDao
+import my.test.twitch.app03_data.model.Game
+import my.test.twitch.app03_data.model.Top
+import my.test.twitch.app03_data.net.GameAPI
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

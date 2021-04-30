@@ -1,19 +1,16 @@
-package my.test.twich.app01_view
+package my.test.twitch.app01_view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import androidx.activity.viewModels
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import dagger.hilt.android.AndroidEntryPoint
-import my.test.twich.R
-import my.test.twich.app02_viewModel.GamesViewModel
-import kotlin.reflect.KClass
+import my.test.twitch.R
+import my.test.twitch.app02_viewModel.GamesViewModel
 
-//import my.test.twich.app03_data.db.GameDatabase
+//import my.test.twitch.app03_data.db.GameDatabase
 
 //lateinit var db: GameDatabase
 @AndroidEntryPoint
@@ -33,7 +30,7 @@ class MainActivity : AppCompatActivity() {
         linLayManager = LinearLayoutManager(this)
         recyclerTopGame.layoutManager = linLayManager
         //viewModel=ViewModelProvider(this).get(GamesViewModel::class.java)
-        val viewModel:GamesViewModel by viewModels()
+        val viewModel: GamesViewModel by viewModels()
 
         viewModel.getGames().observe(this, Observer { games ->
             games?.let {

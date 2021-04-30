@@ -1,4 +1,4 @@
-package my.test.twich
+package my.test.twitch
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("my.test.twich", appContext.packageName)
+        assertEquals("my.test.twitch", appContext.packageName)
     }
 }

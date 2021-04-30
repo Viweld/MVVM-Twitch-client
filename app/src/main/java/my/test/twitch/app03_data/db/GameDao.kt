@@ -1,10 +1,10 @@
-package my.test.twich.app03_data.db
+package my.test.twitch.app03_data.db
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
 import dagger.Provides
 import kotlinx.coroutines.flow.Flow
-import my.test.twich.app03_data.model.Top
+import my.test.twitch.app03_data.model.Top
 
 
 @Dao

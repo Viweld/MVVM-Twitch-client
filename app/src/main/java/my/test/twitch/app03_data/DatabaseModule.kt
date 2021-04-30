@@ -1,4 +1,4 @@
-package my.test.twich.app03_data
+package my.test.twitch.app03_data
 
 import android.content.Context
 import androidx.room.Room
@@ -8,8 +8,8 @@ import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 
-import my.test.twich.app03_data.db.GameDao
-import my.test.twich.app03_data.db.GameDatabase
+import my.test.twitch.app03_data.db.GameDao
+import my.test.twitch.app03_data.db.GameDatabase
 import javax.inject.Singleton
 
 @InstallIn(SingletonComponent::class)

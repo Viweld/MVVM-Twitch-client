@@ -1,4 +1,4 @@
-package my.test.twich
+package my.test.twitch
 
 import org.junit.Test
 

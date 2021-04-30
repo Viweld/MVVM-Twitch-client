@@ -1,6 +1,9 @@
-package my.test.twich.app03_data.model
+package my.test.twitch.app03_data.model
 
-data class Box(
+import androidx.room.Entity
+
+
+data class Logo(
     val large: String,
     val medium: String,
     val small: String,

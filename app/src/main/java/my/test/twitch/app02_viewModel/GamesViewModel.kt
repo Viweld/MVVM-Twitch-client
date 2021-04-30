@@ -1,11 +1,11 @@
-package my.test.twich.app02_viewModel
+package my.test.twitch.app02_viewModel
 
 import android.util.Log
 import androidx.lifecycle.*
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
-import my.test.twich.app03_data.GameRepositoryImpl
-import my.test.twich.app03_data.model.Top
+import my.test.twitch.app03_data.GameRepositoryImpl
+import my.test.twitch.app03_data.model.Top
 import javax.inject.Inject
 
 @HiltViewModel
