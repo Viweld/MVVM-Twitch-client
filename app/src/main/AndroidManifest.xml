@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Twich">
         <activity android:name="my.test.twitch.app01_view.MainActivity"
-            android:label="Twich">
+            android:label="Twitch Top-10">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
