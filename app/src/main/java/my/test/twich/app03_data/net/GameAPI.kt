@@ -8,5 +8,5 @@ import retrofit2.http.*
 
 interface GameAPI {
     @GET("top")
-    fun getGame(): Call<Game>
+   fun getGame(): Call<Game>
 }

@@ -14,15 +14,12 @@ import my.test.twich.app03_data.model.Game
 import my.test.twich.app03_data.model.GameX
 
 import my.test.twich.R
+import my.test.twich.app03_data.model.Top
 
 class TopGameAdapter(
     private val context: Context,
-    private val gameList: Game
+    private val gameList: List<Top>
 ) : RecyclerView.Adapter<TopGameAdapter.MyViewHolder>() {
-
-    //init{
-    //    Log.d("test_adapter", gameList.top[5].game.name.toString())
-    //}
 
     inner class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val image = itemView.image_game
@@ -50,18 +47,18 @@ class TopGameAdapter(
         return MyViewHolder(itemView)
     }
 
-    override fun getItemCount() = gameList.top.size
+    override fun getItemCount() = gameList.size
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        val listItem = gameList.top[position].game
+        val listItem = gameList[position].game
         holder.bind(listItem)
 
         //Log.d("test_adapter", gameList.top[5].game.name.toString())
 
-        Glide.with(context).load(gameList.top[position].game.box.medium).into(holder.image)
-        holder.txt_viewers.text = gameList.top[position].viewers.toString()
-        holder.txt_channels.text = gameList.top[position].channels.toString()
-        holder.txt_name.text = gameList.top[position].game.name
+        Glide.with(context).load(gameList[position].game.box.medium).into(holder.image)
+        holder.txt_viewers.text = gameList[position].viewers.toString()
+        holder.txt_channels.text = gameList[position].channels.toString()
+        holder.txt_name.text = gameList[position].game.name
 
     }
 
